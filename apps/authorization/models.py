@@ -12,15 +12,15 @@ class CustomUser(AbstractUser):
         (ADMIN, 'Admin'),
         (USER, 'User')
     )
-
     is_mentor = models.BooleanField(
         default=False,
         help_text=tr(
             'Поле для указания, является ли пользователь ментором'
         )
-    )
+    )``
     user_type = models.CharField(
         choices=USER_TYPE,
         default=USER,
-        max_length=15
+        max_length=15,
+        help_text=tr('Поле для обозначение типа пользователя')
     )
