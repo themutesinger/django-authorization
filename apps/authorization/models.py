@@ -17,7 +17,7 @@ class CustomUser(AbstractUser):
         help_text=tr(
             'Поле для указания, является ли пользователь ментором'
         )
-    )``
+    )
     user_type = models.CharField(
         choices=USER_TYPE,
         default=USER,
